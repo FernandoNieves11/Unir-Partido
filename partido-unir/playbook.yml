@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  vars:
+    first_name: Aitor
+    last_name: Menta
+    city: Madrid
+  vars_files:
+    - roles/generar_partido/vars/partido_vars.yml
+
+  roles:
+    - generar_partido
